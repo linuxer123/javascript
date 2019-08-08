@@ -74,7 +74,33 @@ for (i=0,j=10;i<10;i++,j--) {
 	sum +=i*j;
 	// console.log(sum);
 }
+var o= {x:1,y:2,z:3};
 
-for (var p in o) {
-	console.log(o[p])
+for (var p in o){
+
+	console.log(p)
+}
+
+
+
+try {
+	//
+	throw new Error("x不能是负数");
+} catch {
+	console.log("e");
+} finally {
+	//
+	console.log("finally")
+}
+
+try {
+	// 要求用户输入一个数字
+	var n=Number(prompt("请输入一个正整数"));
+	// 假设输入是合法的，计算这个数年阶乘
+	var f= factorial(n);
+	// 显示结果
+	alert(n + "I =" + f);
+} catch {
+	// 如果输入不合法，将执行这里的逻辑
+	alert(ex);	// 告诉用户产生了什么错误
 }
